@@ -1,0 +1,18 @@
+{
+  "name": "fs-test-task",
+  "version": "1.0.0",
+  "description": "Full Stack Test Task",
+  "main": "index.js",
+  "scripts": {
+    "install:fe": "cd fe && npm install",
+    "dev:fe": "cd fe && npm run dev",
+    "dev:be": "docker compose up -d",
+    "test": "concurrently \"npm run dev:fe\" \"cd fe && npx cypress run\""
+  },
+  "author": "Illia S",
+  "license": "ISC",
+  "workspaces": [
+    "fe",
+    "be"
+  ]
+}
